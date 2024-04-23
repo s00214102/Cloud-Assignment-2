@@ -12,7 +12,7 @@
 
 
     <h2>View all products</h2>
-    <div class="button-container"></div><button onclick="viewAllProducts()">Show</button></div>
+    <div class="button-container"><button onclick="fetchAllProducts()">Show</button></div>
 
     <!-- <h2>Retrieve game save by ID</h2>
     <textarea id="gameSaveData" rows="10" cols="50" placeholder="Game Save will display here"></textarea>
@@ -22,7 +22,12 @@
 		Images will be appended here dynamically
     </div> -->
 
-	<button onclick="addExampleProducts()">Add Example Products to DynamoDB</button>
+    <body onload="fetchAndDisplayProducts()">
+        <!-- The list box to populate with products -->
+        <div id="productList" class="product-list"></div>
+    </body>
+
+	<div class="button-container"></div><button onclick="addExampleProducts()">Add Example Products to DynamoDB</button></div>
     <script src="script.js"></script>
 </body>
 </html>
